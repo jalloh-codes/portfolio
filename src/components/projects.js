@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import  {Container, Row} from 'reactstrap';
 import Card from './card';
 import memoryGame from '../img/memoryGame.png';
 import review from '../img/review.png'
@@ -34,11 +33,11 @@ class Projects  extends Component{
                 </div>
                 <div className="rows">
                     <Card image={memoryGame} title={'Memory Game'} 
-                    link={`https://jalloh-codes.github.io/memory-game/`}/>
+                    link={`https://jalloh-codes.github.io/memory-game/`} alt={'memoryGame'}/>
                     <Card image={review} title={'Restuarant review app'} 
-                    link={`https://jalloh-codes.github.io/restaurant-reviews-app/`}/>
+                    link={`https://jalloh-codes.github.io/restaurant-reviews-app/`} alt={'restuarant'}/>
                     <Card image={neighborhood} title={'Neighborhood'} 
-                    link={`https://jalloh-codes.github.io/neightborhoodmap/`}/>
+                    link={`https://jalloh-codes.github.io/neightborhoodmap/`} alt={'neighborhood'}/>
                 </div>
                 <div className="rows">
                 {

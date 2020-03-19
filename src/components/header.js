@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import  {Navbar, NavItem, NavLink, Nav, 
-    NavbarToggler, Collapse,NavbarBrand, Container} from 'reactstrap';
+
 
 class Header  extends Component{
 

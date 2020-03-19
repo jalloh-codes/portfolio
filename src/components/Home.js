@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import  {Container, Jumbotron} from 'reactstrap';
 class Home  extends Component{
 
     render(){
