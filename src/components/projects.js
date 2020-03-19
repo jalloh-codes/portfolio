@@ -22,7 +22,6 @@ class Projects  extends Component{
     }
 
     render(){
-        console.log(this.state.data);
         return( 
         <div className="projects">
             <div className="works">
