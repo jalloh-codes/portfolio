@@ -1,0 +1,193 @@
+$primary-color: rgb(255, 251, 251);
+$secondary-color: #000000;
+$button-color: rgb(66, 4, 4);
+$show-home-image: true;
+$home-image: url(./img/background.jpeg);
+
+html{
+  font-size: 10px;
+  li{
+    list-style: none;
+  }
+}
+*{
+  box-sizing: border-box;
+  font-family: monospace;
+}
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+  position: absolute;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+@mixin divCenter {
+    font-family: monospace;
+    margin: 0 auto;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+body{
+  height: 100%;
+}
+
+//Set Text Color
+@function set-text-color($color){
+  @if(lightness($color)> 40){
+      @return #000;
+  }@else{
+      @return #fff;
+  }
+}
+
+a{
+  color:set-text-color($primary-color);
+  text-decoration: none;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: $primary-color;
+  display: inline-flex;
+  
+  .logo{
+    font-size: 20px;
+    font-weight: bold;
+     border-bottom: 4px solid #420404;
+     color: $secondary-color;
+    width: 25px;
+    float: left;
+  }
+
+  .links{
+    width: auto;
+    float: right;
+    li{
+      list-style: none;
+      display: inline;
+      margin-left: 10px;
+      font-size: 15px;
+      a{
+      color: $secondary-color;
+      border-bottom: 4px solid #420404;
+      }
+    }
+  }
+}
+
+.footer{
+  height: 5em;
+  bottom: 0;
+  position: fixed;
+  background: $primary-color;
+  width: 100%;
+  .fab:nth-child(1){
+    margin-right: 10px;
+  }
+  span{
+    color: $secondary-color;
+    font-size: 20px;
+  }
+}
+.projects{
+  @include easeOut();
+  margin-bottom: 10rem;
+  .works{
+    margin: 0 auto;
+    @include divCenter();
+    display: block;
+    flex-wrap: wrap;
+
+    div{
+      margin: 10px 0 10px 0;
+    }
+    .rows{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+
+      .cards{
+        display: flex;
+        width: 220px;
+        background: #000000;
+        color: white;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        padding: 5px;
+        position: relative;
+        margin-left: 10px;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        font-size: medium;
+        font-weight: 500;
+        a{
+          color: $primary-color;
+        }
+
+        img{
+          width: 100%;
+          border-radius: 10px;
+          height: 300px;
+        }
+      }
+      .sm-cards{
+        background: $primary-color;
+        display: flex;
+        width: 220px;
+        color: $secondary-color;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        padding: 5px;
+        position: relative;
+        margin-left: 10px;
+        flex-direction: column;
+        border: 1px solid rgb(95, 64, 207);
+        font-size: medium;
+        font-weight: 500;
+        li{
+          a{
+            color: darken($color: #225dfd, $amount: 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.home{
+  @include easeOut();
+  
+  .info{
+    background-color: $primary-color;
+    div{
+      font-family: monospace;
+      margin: 0 auto;
+      width:40rem;
+    }
+  }
+}
+.text-secondary{
+  color: $secondary-color;
+}
+// "homepage": "https://jalloh-codes.github.io/portfolio/",
+//    "predeploy": "npm run build",
+//"deploy": "gh-pages -d build",
+// Delay each item slide by 0.1s
+
+// @for $x from 1 to 4 {
+//   .nav-item:nth-child(#{$x}){
+//       transition-delay: $x * 0.1s;
+//   }
+// }
+
+.wraper {
+  margin-left: 15rem;
+  margin-right: 15rem;
+  width: 100%;
+}
