@@ -1,8 +1,10 @@
-$primary-color: rgb(255, 251, 251);
+@import 'mobile';
+
+$primary-color: rgb(255, 255, 255);
 $secondary-color: #000000;
 $button-color: rgb(66, 4, 4);
 $show-home-image: true;
-$home-image: url(./img/background.jpeg);
+// $home-image: url(./img/background.jpeg);
 
 html{
   font-size: 10px;
@@ -35,10 +37,10 @@ body{
 
 //Set Text Color
 @function set-text-color($color){
-  @if(lightness($color)> 40){
-      @return #000;
+  @if(lightness($color)> 80){
+      @return rgb(255, 255, 255);
   }@else{
-      @return #fff;
+      @return rgb(2, 2, 2);
   }
 }
 
@@ -58,8 +60,8 @@ a{
   .logo{
     font-size: 20px;
     font-weight: bold;
-     border-bottom: 4px solid #420404;
-     color: $secondary-color;
+    border-bottom: 4px solid #140808;
+    color: set-text-color($secondary-color);
     width: 25px;
     float: left;
   }
@@ -73,8 +75,14 @@ a{
       margin-left: 10px;
       font-size: 15px;
       a{
-      color: $secondary-color;
+      color: set-text-color($secondary-color);
       border-bottom: 4px solid #420404;
+
+
+      &:hover{
+        color: rgb(2, 179, 233);
+        text-decoration: none;
+      }
       }
     }
   }
@@ -90,15 +98,20 @@ a{
     margin-right: 10px;
   }
   span{
-    color: $secondary-color;
+    color: set-text-color($secondary-color);
     font-size: 20px;
+
+
+    &:hover{
+      color: rgb(74, 160, 117);
+      text-decoration: none;
+    }
   }
 }
 .projects{
   @include easeOut();
   margin-bottom: 10rem;
   .works{
-    margin: 0 auto;
     @include divCenter();
     display: block;
     flex-wrap: wrap;
@@ -126,8 +139,25 @@ a{
         border: 1px solid rgba(0, 0, 0, 0.125);
         font-size: medium;
         font-weight: 500;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25),
+         -5px -5px 30px 7px rgba(0,0,0,0.22);
+
+        &hover {
+          transform: scale(0.9, 0.9);
+          box-shadow: 5px 5px 30px 15px rgba(202, 32, 9, 0.808), 
+            -5px -5px 30px 15px rgb(255, 0, 0);
+        }
+
+        
         a{
           color: $primary-color;
+
+          &:hover{
+            color: rgb(69, 186, 221);
+            text-decoration: none;
+          }
         }
 
         img{
@@ -150,12 +180,24 @@ a{
         border: 1px solid rgb(95, 64, 207);
         font-size: medium;
         font-weight: 500;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25),
+         -5px -5px 30px 7px rgba(0,0,0,0.22);
+
+
+         &:hover{
+          color: rgba(32, 51, 29, 0.63);
+          font-weight: bolder;
+        }
         li{
           a{
             color: darken($color: #225dfd, $amount: 0);
           }
         }
       }
+
+      
     }
   }
 }
@@ -175,19 +217,29 @@ a{
 .text-secondary{
   color: $secondary-color;
 }
-// "homepage": "https://jalloh-codes.github.io/portfolio/",
-//    "predeploy": "npm run build",
-//"deploy": "gh-pages -d build",
-// Delay each item slide by 0.1s
-
-// @for $x from 1 to 4 {
-//   .nav-item:nth-child(#{$x}){
-//       transition-delay: $x * 0.1s;
-//   }
-// }
 
 .wraper {
   margin-left: 15rem;
   margin-right: 15rem;
   width: 100%;
+}
+
+
+
+
+//media Query Mixins
+@media screen and (min-width: 768px) {
+  @include mediaXL();
+}
+
+@media screen and (min-width: 501px) and (max-width: 767px) {
+  @include mediaLg();
+}
+
+@media screen and (min-width: 377px) and (max-width: 500px) {
+  @include mediaMd();
+}
+
+@media screen and (max-width: 376px) {
+  @include mediaSm();
 }

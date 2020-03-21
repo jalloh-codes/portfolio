@@ -42,8 +42,8 @@ class Projects  extends Component{
                 {
                     this.state.data.map(e =>{ 
                     return(
-                        <div className="sm-cards">
-                            <li key={e.id}><spa>Name:</spa> <a href={e.html_url}>{e.name}</a></li>
+                        <div className="sm-cards" key={e.id+1}>
+                            <li key={e.id}><span>Name:</span> <a href={e.html_url}>{e.name}</a></li>
                             <p><span>Description:</span> {e.description}</p>
                         </div>)
                     })

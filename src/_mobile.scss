@@ -1,0 +1,258 @@
+@mixin mediaSm {
+    .header{
+
+        .wraper {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: 100%;
+        }
+    }
+
+    .projects{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+        .works{
+            margin-left: 5rem;
+            margin-right: 5rem;
+
+            .rows{
+                margin-left: 0;
+                margin-right: 0;
+
+                .cards{
+                    margin-left: 0;
+                    padding: 2px;
+                    font-size: smaller;
+                    font-weight: bold;
+                    width: 230px;
+                    margin: 6px auto;
+                    border-radius: 25px;
+
+                    img{
+                        border-radius: 25px;
+                        height: 250px;
+                    }
+                }
+                .sm-cards{
+                    width: 240px;
+                    margin: 4px auto;
+                    border-radius: 25px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    padding: 7px;
+
+                    li{
+                        display: inline-flex;
+                    }
+                    p{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+    }
+}
+  
+@mixin mediaMd {
+    .header{
+
+        .wraper {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: 100%;
+        }
+
+        .logo{
+            font-size: 20px;
+        }
+        .links{
+            li{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .projects{
+        font-size: 27px;
+        margin-top: 7rem;
+        margin-bottom: 8rem;
+
+        .works{
+            margin-left: 3rem;
+            margin-right: 3rem;
+
+            .rows{
+                margin-right: 0;
+                margin-left: 0;
+
+                .cards{
+                    font-size: 18px;
+                    font-weight: 800;
+                    margin-left: 1px;
+                    width: 240px;
+                    padding: 4px;
+                    margin: 5px auto;
+                    border-radius: 25px;
+
+                    img{
+                        border-radius: 25px;
+                        height: 280px;
+                    }
+                }
+
+                .sm-cards{
+                    margin: 4px auto;
+                    width: 240px;
+                    border-radius: 25px;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .footer{
+
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+    }
+
+  }
+  
+  @mixin mediaLg {
+    .header{
+
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+        .logo{
+            font-size: 25px;
+        }
+        .links{
+            li{
+                font-size: 25px;
+            }
+        }
+    }
+
+    .projects{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+
+        .works{
+            margin-left: 3rem;
+            margin-right: 3rem;
+
+            .rows{
+                margin-right: 0;
+                margin-left: 0;
+
+
+                .cards{
+                    font-size: 18px;
+                    font-weight: 800;
+                    margin-left: 1px;
+                    width: 48%;
+                    padding: 4px;
+                    margin: 2px 4px 10px;
+                    border-radius: 25px;
+                    display: flex;
+                    flex-flow: wrap;
+
+                    img{
+                        border-radius: 25px;
+                        height: 310px;
+                    }
+                }
+
+                .sm-cards{
+                    margin: 8px auto;
+                    width: 48%;
+                    border-radius: 25px;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+
+    .footer{
+
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+    }
+  }
+  
+  @mixin mediaXL {
+    .header{
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+        .logo{
+            font-size: 25px;
+        }
+        .links{
+            li{
+                font-size: 25px;
+            }
+        }
+    }
+
+    .projects{
+        font-size: 35px;
+        width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+
+        .works{
+            margin-left: 5rem;
+            margin-right: 5rem;
+
+            .rows{
+
+                .cards{
+                    font-size: 19px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .footer{
+        .wraper {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 100%;
+        }
+
+    }
+  }
