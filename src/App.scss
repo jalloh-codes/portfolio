@@ -45,7 +45,7 @@ body{
 }
 
 a{
-  color:set-text-color($primary-color);
+  color: $secondary-color;
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ a{
   width: 100%;
   background: $primary-color;
   display: inline-flex;
-  
+  border-bottom: 1px solid #000;
   .logo{
     font-size: 20px;
     font-weight: bold;
@@ -94,6 +94,7 @@ a{
   position: fixed;
   background: $primary-color;
   width: 100%;
+  border-top: 1px solid #000;
   .fab:nth-child(1){
     margin-right: 10px;
   }
@@ -111,6 +112,7 @@ a{
 .projects{
   @include easeOut();
   margin-bottom: 10rem;
+
   .works{
     @include divCenter();
     display: block;
