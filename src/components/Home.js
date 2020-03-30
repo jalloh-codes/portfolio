@@ -10,7 +10,7 @@ class Home  extends Component{
                <p>
                My is <span>Jalloh</span>, I'm an undergraduate student at the New
                 York City Colloge Of Technology. I'm a posonate Web Developer, with the skills and knowlege of 
-                <i> HTML</i>, <i>CSS</i>, <i>Java</i>, <i>JavaScript</i> and many Web tools, 
+                <i> HTML</i>, <i>CSS</i>, <i>Java</i>, <i>JavaScript</i> and many other Web tools, 
                </p>
                </div>
            </div>
