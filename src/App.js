@@ -12,7 +12,7 @@ class App extends Component {
       <Header/>
         <Switch>
           <Route  exact path="/" render={() =><Home  />} /> 
-          <Route  path="/project/" render={() =><Projects  />} /> 
+          <Route  path="/projects/" render={() =><Projects  />} /> 
        </Switch>
      <Footer/>
     
