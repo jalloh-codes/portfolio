@@ -1,27 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link, useRouteMatch} from 'react-router-dom'
 
 const Header = () =>{
 
-    // constructor(){
-    //     super();
-    //     this.state ={
-    //         open: false
-    //     }
-    //     this.toggleNavbar = this.toggleNavbar.bind(this);
-    // }
 
-    // toggleNavbar = (e) =>{
-    //     e.preventDefault();
-    //     this.setState({
-    //         open: !this.state.open
-    //     })
-    // }
-   // match = useRouteMatch();
-
-    //render(){
         
-        let match = useRouteMatch();
+    
     return(
         <header style={{color: 'aliceblue'}} className="header">
                 <div className="wraper">
