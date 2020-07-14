@@ -1,11 +1,8 @@
 import React from 'react';
-import {Link, useRouteMatch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Header = () =>{
 
-
-        
-    
     return(
         <header style={{color: 'aliceblue'}} className="header">
                 <div className="wraper">
