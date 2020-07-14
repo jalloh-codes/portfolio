@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useRouteMatch} from 'react-router-dom'
 
-class Header  extends Component{
+const Header = () =>{
 
-    constructor(){
-        super();
-        this.state ={
-            open: false
-        }
-        this.toggleNavbar = this.toggleNavbar.bind(this);
-    }
+    // constructor(){
+    //     super();
+    //     this.state ={
+    //         open: false
+    //     }
+    //     this.toggleNavbar = this.toggleNavbar.bind(this);
+    // }
 
-    toggleNavbar = (e) =>{
-        e.preventDefault();
-        this.setState({
-            open: !this.state.open
-        })
-    }
+    // toggleNavbar = (e) =>{
+    //     e.preventDefault();
+    //     this.setState({
+    //         open: !this.state.open
+    //     })
+    // }
+   // match = useRouteMatch();
 
-    render(){
+    //render(){
+        
+        let match = useRouteMatch();
     return(
         <header style={{color: 'aliceblue'}} className="header">
                 <div className="wraper">
@@ -26,13 +29,13 @@ class Header  extends Component{
                     <div className="links">
                         <ul>
                             <li><Link to="/">About</Link></li>
-                            <li><Link to="/project">Projectsd</Link></li>
+                            <li><Link to={`/project`}>Projects</Link></li>
                         </ul>
                     </div>
                 </div>
         </header>
     );
-    }
+    
 }
 
 export default Header;

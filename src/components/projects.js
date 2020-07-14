@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Card from './card';
 import memoryGame from '../img/memoryGame.png';
-import review from '../img/review.png'
-import neighborhood from '../img/neighborhood.png'
+import review from '../img/review.png';
+import neighborhood from '../img/neighborhood.png';
+import covid19tracker from '../img/covid19tracker.png'
 import axios from 'axios';
 class Projects  extends Component{
 
@@ -37,6 +38,8 @@ class Projects  extends Component{
                     link={`https://jalloh-codes.github.io/restaurant-reviews-app/`} alt={'restuarant'}/>
                     <Card image={neighborhood} title={'Neighborhood'} 
                     link={`https://jalloh-codes.github.io/neightborhoodmap/`} alt={'neighborhood'}/>
+                    <Card image={covid19tracker} title={'Covid-19 Tracker'} 
+                    link={`https://stoic-ride-8cd58c.netlify.app/`} alt={'covid19tracker'}/>
                 </div>
                 <div className="rows">
                 {
