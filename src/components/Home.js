@@ -6,11 +6,12 @@ class Home  extends Component{
         <div className="home">
            <div className="info">
                <div>
-               <p>Hello!!!</p>
-               <p>
-               My is <span>Jalloh</span>, I'm an undergraduate student at the New
-                York City Colloge Of Technology. I'm a posonate Web Developer, with the skills and knowlege of 
-                <i> HTML</i>, <i>CSS</i>, <i>Java</i>, <i>JavaScript</i> and many other Web tools, 
+               <p className="text">
+               Hello, I'm <span>Jalloh</span>. I am a passionate 
+               web developer. 
+               I have knowledge and skills in <i> HTML</i>, 
+               <i> CSS</i>, <i> Java</i>, <i> JavaScript</i> 
+               and many other Web tools.
                </p>
                </div>
            </div>
