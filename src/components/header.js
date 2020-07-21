@@ -6,7 +6,7 @@ const Header = () =>{
     return(
         <header style={{color: 'aliceblue'}} className="header">
                 <div className="wraper">
-                    <div className="logo"> <img src={logo} /> </div>
+                    <div className="logo"> <img src={logo}  alt="logo"/> </div>
                     <div className="links">
                         <ul>
                             <li><Link to="/">About</Link></li>
