@@ -5,7 +5,6 @@ class Footer extends Component {
         return(
             <footer className="footer">
                    <div className="wraper">
-                       <span>Follow me:</span>
                         <a href="https://www.linkedin.com/in/saylu-jalloh-997487132">
                             <i className="fab fa-linkedin fa-3x"></i>
                         </a>
