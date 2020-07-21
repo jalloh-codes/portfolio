@@ -10,7 +10,7 @@ class Home  extends Component{
                Hello, I'm <span>Jalloh</span>. I am a passionate 
                web developer. 
                I have knowledge and skills in <i> HTML</i>, 
-               <i> CSS</i>, <i> Java</i>, <i> JavaScript</i> 
+               <i> CSS</i>, <i> Java</i>, <i> JavaScript</i>, 
                and many other Web tools.
                </p>
                </div>
