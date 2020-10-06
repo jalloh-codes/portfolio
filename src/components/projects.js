@@ -26,13 +26,6 @@ class Projects  extends Component{
         return( 
         <div className="projects">
             <div className="works">
-                {/* <div className="rows">
-                    <div className="info">
-                    <p className="text">These are some of my projects and the rest are available on
-                        <a href="https://github.com/jalloh-codes"> Github</a>.
-                    </p>
-                    </div>
-                </div> */}
                 <div className="rows">
                     <Card image={memoryGame} title={'Memory Game'} 
                     link={`https://jalloh-codes.github.io/memory-game/`} alt={'memoryGame'}/>

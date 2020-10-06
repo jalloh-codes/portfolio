@@ -11,6 +11,9 @@ class Footer extends Component {
                         <a href="https://github.com/jalloh-codes">
                             <i className="fab fa-github fa-3x"></i>
                         </a>
+                        <a href="https://www.youtube.com/channel/UC17Nog3DgKCHuxndDugPiCg?view_as=subscriber">
+                            <i class="fab fa-youtube fa-3x"></i>
+                        </a>
                     </div>
             </footer>
         );

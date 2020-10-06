@@ -4,18 +4,22 @@ $primary-color: rgb(255, 255, 255);
 $secondary-color: #000000;
 $button-color: rgb(66, 4, 4);
 $show-home-image: true;
-// $home-image: url(./img/background.jpeg);
+$home-image: url(./img/background.jpeg);
+
 
 html{
   font-size: 10px;
   li{
     list-style: none;
   }
+  body{
+    background-color: $secondary-color;
+  }
+  a{
+    text-decoration: none;
+  }
 }
-*{
-  box-sizing: border-box;
-  font-family: monospace;
-}
+
 @mixin easeOut {
   transition: all 0.5s ease-out;
   position: absolute;
@@ -30,9 +34,7 @@ html{
   padding: 10px;
 }
 
-body{
-  height: 100%;
-}
+
 
 //Set Text Color
 @function set-text-color($color){
@@ -43,36 +45,27 @@ body{
   }
 }
 
-a{
-  color: $secondary-color;
-  text-decoration: none;
-}
+
 
 .header{
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
-  background: $primary-color;
   display: inline-flex;
-
+  background-color: #480b9121;
   .wraper{
     margin-left: 15rem;
     margin-right: 15rem;
     width: 100%;
     .logo{
-      width: 8rem;
-      height: 8rem;
       float: left;
-      text-align: center;
       display: block;
     }
       img{
         max-width: 100%;
         height: 8rem;
       }
-
-    
 
     .links{
       width: auto;
@@ -87,8 +80,8 @@ a{
         margin-left: 10px;
         font-size: 20px;
         a{
-        color: set-text-color($secondary-color);
-        border-bottom: 4px solid #420404;
+          color: #eae6e6;
+          border-bottom: 2px solid #eae6e6;
 
 
         &:hover{
@@ -106,23 +99,32 @@ a{
   height: 5em;
   bottom: 0;
   position: fixed;
-  background: $primary-color;
   width: 100%;
   display: flex;
   justify-content: center;
-  .fab:nth-child(1){
-    margin-right: 10px;
-  }
-  span{
-    color: set-text-color($secondary-color);
-    font-size: 20px;
-
-
-    &:hover{
-      color: rgb(74, 160, 117);
+  background-color: #480b9121;
+  .wraper{
+    // background-color: #eae6e6;
+    a { 
+      color: inherit; 
+      i{
+        background-color:#ffdbdb;
+      }
       text-decoration: none;
+      cursor: pointer;
+  } 
+    .fab:nth-child(1){
+      margin-right: 10px;
+    
     }
   }
+  // span{
+  //   font-size: 20px;
+  //   &:hover{
+  //     color: rgb(74, 160, 117);
+  //     text-decoration: none;
+  //   }
+  // }
 }
 .projects{
   @include easeOut();
@@ -170,7 +172,6 @@ a{
         
         a{
           color: $primary-color;
-
           &:hover{
             color: rgb(69, 186, 221);
             text-decoration: none;
@@ -230,15 +231,16 @@ a{
       width:41rem;
       text-align: center;
       margin: auto;
+      color: $primary-color;
+      span{
+        font-weight: 900;
+        font-style: oblique;
+        font-size: larger;
+        color: goldenrod;
+      }
     }
   }
 }
-.text-secondary{
-  color: $secondary-color;
-}
-
-
-
 
 
 
