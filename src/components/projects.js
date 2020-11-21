@@ -4,6 +4,7 @@ import memoryGame from '../img/memoryGame.png';
 import review from '../img/review.png';
 import neighborhood from '../img/neighborhood.png';
 import covid19tracker from '../img/covid19tracker.png'
+import fyyur from '../img/fyyur.png'
 import axios from 'axios';
 class Projects  extends Component{
 
@@ -35,6 +36,9 @@ class Projects  extends Component{
                     link={`https://jalloh-codes.github.io/neightborhoodmap/`} alt={'neighborhood'}/>
                     <Card image={covid19tracker} title={'Covid-19 Tracker'} 
                     link={`https://stoic-ride-8cd58c.netlify.app/`} alt={'covid19tracker'}/>
+                    <Card image={fyyur} title={'fyyur music app'} 
+                    // link={`https://stoic-ride-8cd58c.netlify.app/`}
+                     alt={'fyyur music app'}/>
                 </div>
                 <div className="rows">
                 {
