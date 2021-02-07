@@ -1,10 +1,35 @@
 @mixin mediaSm {
+    .home{
+        .info{
+            .note{
+                .text{
+                    width: auto;
+                }
+            }
+        }
+    }
     .header{
-
         .wraper {
-            margin-left: 1rem;
-            margin-right: 1rem;
             width: 100%;
+            .links{
+                display: flex;
+                width: 100%;
+                min-height: 5rem;
+                li{
+                    display: flex;
+                    font-size: 20px;
+                    justify-content: space-between;
+                    flex-grow: 1;
+                    a{
+                        color: #eae6e6;
+                        text-decoration: none;
+                        &:hover{
+                        color: rgb(140, 154, 236);
+                        border-bottom: 2px solid #eae6e6;
+                    }
+                    }
+                }
+            }
         }
     }
 
@@ -13,74 +38,99 @@
         width: 100%;
         margin-top: 5rem;
         margin-bottom: 8rem;
-        padding-top: 4rem;
-        .works{
+        padding-top: 3rem;
+        .work-wrapper{
             margin: auto;
             padding: 10px;
 
-            .rows{
+            .card-body{
                 margin-left: 0;
-                margin-right: 0;
+                padding: 2px;
+                font-size: smaller;
+                font-weight: bold;
+                width: 90%;
+                margin: 6px auto;
+                border-radius: 25px;
 
-                .cards{
-                    margin-left: 0;
-                    padding: 2px;
-                    font-size: smaller;
-                    font-weight: bold;
-                    width: 230px;
-                    margin: 6px auto;
+                img{
                     border-radius: 25px;
+                    height: 300px;
 
-                    img{
-                        border-radius: 25px;
-                        height: 250px;
-                    }
                 }
-                .sm-cards{
-                    width: 240px;
-                    margin: 4px auto;
-                    border-radius: 25px;
-                    font-size: 13px;
-                    font-weight: 400;
-                    padding: 7px;
+            }
+            .sm-cards{
+                width: 240px;
+                margin: 4px auto;
+                border-radius: 25px;
+                font-size: 13px;
+                font-weight: 400;
+                padding: 7px;
 
-                    li{
-                        display: inline-flex;
-                    }
-                    p{
-                        display: inline-block;
-                    }
+                li{
+                    display: inline-flex;
+                }
+                p{
+                    display: inline-block;
+                }
+            }
+
+        }
+        .skills{
+            .list{
+                display: flex;
+                justify-content: flex-start;
+                .name{
+                    width: 40%;
+                    height: 13rem;
+                    justify-content: flex-start;
+                    font-size: 16px;
+                    margin: 5px;
                 }
             }
         }
     }
 
-    .footer{
-
-        .wraper {
-            margin-left: 2rem;
-            margin-right: 2rem;
-            width: 100%;
+    .icon-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 1px;
+        a{
+            margin: 10px
         }
-
     }
 }
   
 @mixin mediaMd {
+    .home{
+        .info{
+            .note{
+                .text{
+                    width: 34rem;
+                }
+            }
+        }
+    }
+
+
     .header{
-
         .wraper {
-            margin-left: 3rem;
-            margin-right: 3rem;
             width: 100%;
-        }
-
-        .logo{
-            font-size: 20px;
-        }
-        .links{
-            li{
-                font-size: 20px;
+            .links{
+                display: flex;
+                width: 100%;
+                li{
+                    display: flex;
+                    font-size: 20px;
+                    justify-content: space-between;
+                    a{
+                    color: #eae6e6;
+                    text-decoration: none;
+                    &:hover{
+                    color: rgb(140, 154, 236);
+                    border-bottom: 2px solid #eae6e6;
+                    }
+                    }
+                }
             }
         }
     }
@@ -122,6 +172,19 @@
                 }
             }
         }
+        .skills{
+            .list{
+                display: flex;
+                justify-content: flex-start;
+                .name{
+                    width: 46%;
+                    height: 12rem;
+                    justify-content: flex-start;
+                    margin: 2px;
+                    font-size: x-large;
+                }
+            }
+        }
     }
 
     .footer{
@@ -137,17 +200,21 @@
   }
   
   @mixin mediaLg {
+    .home{
+        .info{
+            .note{
+                .text{
+                    width: 40rem;
+                }
+            }
+        }
+    }
     .header{
 
         .wraper {
-            margin-left: 4rem;
-            margin-right: 4rem;
             width: 100%;
         }
 
-        .logo{
-            font-size: 25px;
-        }
         .links{
             li{
                 font-size: 25px;
@@ -161,41 +228,37 @@
         margin-top: 10rem;
         margin-bottom: 8rem;
 
-        .works{
+        .work-wrapper{
             margin: auto;
             width: 80%;
             padding: 10px;
 
-            .rows{
-                margin-right: 0;
-                margin-left: 0;
+ 
+            .card-body{
+                font-size: 18px;
+                font-weight: 800;
+                margin-left: 1px;
+                width: 48%;
+                padding: 4px;
+                margin: 2px 4px 10px;
+                border-radius: 25px;
+                display: flex;
+                flex-flow: wrap;
 
-
-                .cards{
-                    font-size: 18px;
-                    font-weight: 800;
-                    margin-left: 1px;
-                    width: 48%;
-                    padding: 4px;
-                    margin: 2px 4px 10px;
+                img{
                     border-radius: 25px;
-                    display: flex;
-                    flex-flow: wrap;
-
-                    img{
-                        border-radius: 25px;
-                        height: 310px;
-                    }
-                }
-
-                .sm-cards{
-                    margin: 8px auto;
-                    width: 48%;
-                    border-radius: 25px;
-                    font-size: 17px;
-                    font-weight: 400;
+                    height: 310px;
                 }
             }
+
+            .sm-cards{
+                margin: 8px auto;
+                width: 48%;
+                border-radius: 25px;
+                font-size: 17px;
+                font-weight: 400;
+            }
+            
         }
     }
 
@@ -212,16 +275,22 @@
   }
   
   @mixin mediaXL {
+
+    .home{
+        .info{
+            .note{
+                .text{
+                    width: 40rem;
+                }
+            }
+        }
+    }
     .header{
         .wraper {
-            margin-left:5rem;
-            margin-right: 5rem;
             width: 100%;
         }
 
-        .logo{
-            font-size: 25px;
-        }
+
         .links{
             li{
                 font-size: 25px;
@@ -233,18 +302,23 @@
         font-size: 35px;
         width: 100%;
         padding-top: 2rem;
-        .works{
+        .work-wrapper{
             margin: 0 auto;
             width: 90%;
             padding: 10px;
-            .rows{
-                margin: 0 auto;
-                .cards{
-                    // font-size: 19px;
-                    // font-weight: 600;
-                    // margin: 0 auto;
+
+            .card-body{
+                // font-size: 19px;
+                font-weight: 600;
+                // margin: 0 auto;
+                width: 315px;
+
+                img{
+                    border-radius: 25px;
+                    height: 310px;
                 }
             }
+            
         }
     }
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import logo from '../img/Sj.jpg'
+
+
+
 const Header = () =>{
 
     return(
-        <header style={{color: 'aliceblue'}} className="header">
+        <header className="header">
                 <div className="wraper">
-                    <div className="logo"> <img src={logo}  alt="logo"/> </div>
-                    <div className="links">
-                        <ul>
-                            <li><Link to="/">About</Link></li>
+                        <ul className="links">
+                            <li><Link to="/">About me</Link></li>
                             <li><Link to={`/project`}>Projects</Link></li>
+                            <li><Link to={`/skills`}>Skills</Link></li>
                         </ul>
-                    </div>
                 </div>
         </header>
     );
