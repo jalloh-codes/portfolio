@@ -21,7 +21,7 @@ class Home  extends Component{
                </div>
            </div>
            <div className="icon-wrapper">
-                        <a href="https://www.linkedin.com/in/saylu-jalloh-997487132">
+                        <a href="https://www.linkedin.com/in/saylujalloh/">
                         <i class="devicon-linkedin-plain"></i>
                             
                         </a>
