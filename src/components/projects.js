@@ -65,7 +65,7 @@ const Projects = ()=> {
                     <div className="work-wrapper">
                         <Card image={imgcovid1} 
                         title={'Memory Game'} s
-                        link={`https://covid-19-tracker-silk.vercel.app/`} alt={'imgcovid1'}
+                        link={`https://sad-pike-01b70a.netlify.app/`} alt={'imgcovid1'}
                         data={chooseData('restaurant-reviews-app', data)}
                         name={'memory-game'}/>  
 
@@ -78,7 +78,7 @@ const Projects = ()=> {
                         alt={'neighborhood'} data={chooseData('neightborhoodmap', data)}/>
                         
                         <Card image={imggame1} title={'Memory Game'} 
-                        link={`https://stoic-ride-8cd58c.netlify.app/`} alt={'memorygame'}
+                        link={`https://pedantic-hopper-c46834.netlify.app/`} alt={'memorygame'}
                             data={chooseData('covid-19-tracker', data)}/>
                         
                         <Card image={imgmusic1} title={'Fyyur music app'} 
