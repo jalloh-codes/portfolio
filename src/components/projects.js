@@ -70,7 +70,7 @@ const Projects = ()=> {
                         name={'memory-game'}/>  
 
                         <Card image={imgquiz1} title={'Udacity Trivia'} 
-                        link={`https://stoic-ride-8cd58c.netlify.app/`}
+                        link={`https://github.com/jalloh-codes/trivia`}
                             alt={'Fyyur music app'} data={data}/>
 
                         <Card image={imgneigh1} title={'Neighborhood'} 
@@ -82,7 +82,7 @@ const Projects = ()=> {
                             data={chooseData('covid-19-tracker', data)}/>
                         
                         <Card image={imgmusic1} title={'Fyyur music app'} 
-                        link={`https://stoic-ride-8cd58c.netlify.app/`}
+                        link={`https://github.com/jalloh-codes/Fyyur`}
                             alt={'fyyur music app'} data={data}/>
                         
                         <Card image={imgbook1} title={'Book Store'} 
