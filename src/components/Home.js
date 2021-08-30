@@ -1,40 +1,56 @@
 import React, {Component} from 'react';
-
+import Experience from '../components/Experience'
+import Skills from '../components/skills'
 class Home  extends Component{
 
+
+state={
+    experience: [
+        {id:0, 
+        role:'Software Developer Intern',
+        link: `https://www.a2apharma.com`,
+        company:'A2A Pharmaceuticals',
+        date: 'June 2020 - Present',
+        roledis: ['Used React.js to build a Web app for a prebuilt Flask backend.',
+                'Packaged a Web app into a desktop app with Electron.',
+                'Debugged Flask App(Backend) for better interaction with React.js(Frontend).',
+                'Built and maintains AWS tools, EC2 and Workspace.']
+        },
+    ]
+}    
+
     render(){
+        const experiences = this.state.experience
     return(
         <div className="home">
-           <div className="info">
-               <div className="note">
-               <p className="text">
-               Hello, my name is <span>Saylu Jalloh</span>. 
-               I am an undergraduate student at the New York City College Of Technology.
-               I am pursuing a Bachelor in Technology in Computer Systems Technology.
-               </p>
-               </div>
-               <div className="note">
-               <p className="text">
-               I am a passionate web & mobile developer. 
-               I enjoy building frontend and backend applications.
-                </p>
-               </div>
-           </div>
-           <div className="icon-wrapper">
-                        <a href="https://www.linkedin.com/in/saylujalloh/">
-                        <i class="devicon-linkedin-plain"></i>
-                            
-                        </a>
-                        <a href="https://github.com/jalloh-codes">
-                        <i class="devicon-github-original"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UC17Nog3DgKCHuxndDugPiCg?view_as=subscriber">
-                            <i className="fab fa-youtube fa-1x"></i>
-                        </a>
-                        <a href="https://codepen.io/jalloh-code">
-                            <i class="devicon-codepen-plain"></i>
-                        </a>
+            <div className="info-group">
+                <div className="info">
+                    <div className="note">
+                        <p className="text"> <span>Hi!</span>I am Jalloh <i>☺</i></p>
+                        <p className="text">WEB DEVELOPER</p>
+                    </div>
+                    <div className="note-icon">
+                        <i className="fas fa-mobile-alt"></i>
+                        <i className="fas fa-laptop-code"></i>
+                        {/* <p className="text">
+                        I am a passionate web & mobile developer. 
+                        I enjoy building frontend and backend applications.
+                        </p> */}
+                    </div>
+                </div>
+                <div className="group-image">
+                    {/* <img src={Me} alt="profile" /> */}
+                </div>
             </div>
+
+           <div className="info-experience">
+               <h4 className="title">Experience</h4>
+               <div className="group-experience">
+                {experiences.map((experience) => <Experience experience={experience} key={experience.id}/>)}
+               </div>
+              
+           </div>
+           <Skills />
         </div>
     );
     }

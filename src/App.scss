@@ -1,22 +1,22 @@
 @import 'mobile';
 
-
-
   $primary-color: rgb(22, 21, 21);
-  $secondary-color: #dedfec;
+  $secondary-color: #f5fcff;
   $button-color: rgb(66, 4, 4);
   $show-home-image: true;
   $home-image: url(./img/background.jpeg);
-
+  $heater-text-color: #fefcff;
+  $body-color-text: #000022;
 
   html{
   font-size: 10px;
+  font-family: "Archivo Black", sans-serif;
   li{
       list-style: none;
   }
   body{
-      background-color: $secondary-color;
-  }
+      color: $body-color-text;
+ }
   a{
       text-decoration: none;
   }
@@ -30,7 +30,7 @@
   }
 
   @mixin divCenter {
-  margin: 10rem 0 10rem 0;
+  margin: 5rem 0 1rem 0;
   }
 
   @mixin cardParent {
@@ -42,8 +42,13 @@
   flex-direction: row;
   }
 
-
-
+  @mixin switchColor($color) {
+    @if (lightness($color) > 60) {
+        color: #bd0505
+      } @else {
+        color: #dfdfdf;
+      }
+  }
   //Set Text Color
   @function set-text-color($color){
       @if(lightness($color)> 80){
@@ -54,277 +59,338 @@
   }
 
 
-
-  .header{
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-
-  // display: inline-flex;
-  background-color: #05275a;
-
-  .wraper{
-      width: 100%;
-      .links{
-      display: flex;
-      width: 600px;
-      min-height: 5rem;
-      margin: 0 auto;
-      text-align: center;
-      align-items: center;
-      li{
-          display: flex;
-          font-size: 20px;
-          justify-content: center;
-          flex-grow: 1;
-          a{
-          color: #eae6e6;
-          text-decoration: none;
-          &:hover{
-          color: rgb(140, 154, 236);
-          border-bottom: 2px solid #eae6e6;
-          }
-          }
-      }
-    }
-  }
-  }
-
-  .footer{
-  margin-top: 3rem;
-  height: 5em;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  z-index: 2;
-  justify-content: center;
-  
-  .wraper{
-      a { 
-      color: inherit; 
-      i{
-          background-color:#ffdbdb;
-      }
-      text-decoration: none;
-      cursor: pointer;
-  } 
-      .fab:nth-child(1){
-      margin-right: 10px;
-      
-      }
-  }
-  // span{
-  //   font-size: 20px;
-  //   &:hover{
-  //     color: rgb(74, 160, 117);
-  //     text-decoration: none;
-  //   }
-  // }
-  }
-  @mixin card {
-  display: flex;
-  width: 39rem;
-  height: 39rem;;
-  color: white;
-  border-radius: 10px;
-  flex-wrap: wrap;
-  padding: 5px;
-  position: relative;
-  flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  font-size: medium;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.4s;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25),
-  -5px -5px 30px 7px rgba(0,0,0,0.22);
-  margin: 10px
-  }
-
-  .projects{
-  @include easeOut();
-  @include divCenter();
-  display: flex;
-  flex-direction: column;
-  .work-wrapper{
-      @include cardParent();
-  
-      // display: -webkit-inline-box;
-      // flex-wrap: wrap;
-      // margin-right: -15px;
-      // margin-left: -15px;
-
-      .card-body{
-          @include card();
-          &:hover {
-        //   transform: scale(0.9, 0.9);
-          box-shadow: 5px 5px 30px 15px rgba(165, 165, 165, 0.808), 
-              -5px -5px 30px 15px rgba(165, 165, 165, 0.808);
-              -webkit-transform: scale(1.9);
-              -ms-transform: scale(1.1);
-              transform: scale(1.1);
-              margin-right: 2rem;
-              margin-left: 2rem;
-          }
-
-          
-          a{
-          color: $primary-color;
-          &:hover{
-              color: rgb(69, 186, 221);
-              text-decoration: none;
-          }
-          }
-          img{
-          width: 100%;
-          border-radius: 10px;
-          height: 330px;
-          }
-      }
-      .sm-cards{
-        background-color: #dfdfdf;
-        display: flex;
-        flex-wrap: wrap;
-        width: 250px;
-        color: #000000;
-        border-radius: 10px;
-        padding: 4px;
-        text-align: left;
-        position: relative;
-        margin-left: 10px;
-        flex-direction: column;
-        border: 1px solid #5f40cf;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.4s;
-        box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-        margin: 10px 10px;
-          &:hover{
-          color: rgba(32, 51, 29, 0.63);
-          font-weight: bolder;
-          }
-          li{
-          a{
-              color: darken($color: #225dfd, $amount: 0);
-          }
-          }
-      }
-      .pageList{
-          display: flex;
-          justify-content: center
-      }
-
-  }
-
-  .pagi{
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10rem;
-      margin-top: 10rem;
-      .pageList {
-      display: inline-flex;
-      background-color: #fff;
-      padding: 0px;
-      border-width: 2px;
-      border: 2px solid #a49c9ced;
-      border-radius: 5px;
-      li{
-          background-color: #fff;
-          border-right: 2px solid #aea3a3;
-          padding: 1px 6px 1px 6px;
-          font-size: 20px;
-          &:hover{
-          background-color: #e6e0e0;
-          }
-      }
-      }
-  }
-
-  .btn-project {
-      margin-top: 1rem;
-      margin-bottom: 10rem;
-      display: inline-flex;
-      justify-content: center;
-      .more {
-      font-size: initial;
-      font-weight: 700;
-      background-color: #0d0448;
-      color: #fff;      
-      }
-  }
-  
-  }
-
-  .home{ 
-  @include easeOut();
-  @include divCenter();
-  display: flex;
-  flex-direction: column;
-  .info{
-    display: block;
-    margin-bottom: 6rem;
-    .note{
-        margin: 25px;
-        .text{
-        font-family: monospace;
-        margin: 0 auto;
-        width: 40rem;
-        color: $primary-color;
-        font-size: xx-large;
-        span{
-            font-weight: 900;
-            font-style: oblique;
-            font-size: larger;
-            color: goldenrod;
+.header{
+    position: fixed;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    color: $heater-text-color;
+    background-color: #000022;
+    .header-name{
+        h5{
+            white-space: pre;
+            line-height: 1em;
+            font-size: 15px;
+            &:hover{
+                color: #f4eb00;
+            }
         }
-      }
     }
-  }
-  .icon-wrapper{
-      display: flex;
-      justify-content: center;
-      margin-top: 1px;
-      a{
-          margin: 10px;
-          i{
-            font-size: 30px;
-          }
-      }
-  }
+    .wraper{
+        .links{
+        display: flex;
+        width: 600px;
+        min-height: 5rem;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        li{
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            flex-grow: 1;
+            a{
+                color: $heater-text-color;;
+                text-transform: uppercase;
+                text-decoration: none;
+                &:hover{
+                    color: #f4eb00;
+                }
+            }
+        }
+    }
+    }
+    .icon-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-shrink: 2;
+        a{
+            color: $heater-text-color;
+            margin: 10px;
+            i{
+                font-size: 25px;
+                &:hover{
+                    color: #f4eb00;
+                }
+            }
+        }
+    }
+    a{
+        color: #000;
+    }
+}
+
+@mixin card {
+display: flex;
+width: 39rem;
+height: 39rem;;
+color: white;
+border-radius: 10px;
+flex-wrap: wrap;
+padding: 5px;
+position: relative;
+flex-direction: column;
+border: 1px solid rgba(0, 0, 0, 0.125);
+font-size: medium;
+font-weight: 500;
+cursor: pointer;
+transition: 0.4s;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25),
+-5px -5px 30px 7px rgba(0,0,0,0.22);
+margin: 10px
 }
 
 .projects{
-    @include divCenter();
-    .skills{
-   
-        // display: flex;
-        // justify-content: center;
-        .list{
-            @include cardParent();
-            .name{
-                width: 20rem;
-                height: 15rem;
-                background-color: #f0f0f0;
-                margin: 2rem;
-                display: inline-flex;
-                justify-content: center;
-                box-shadow: 10px 10px #00000021;
-                border-radius: 15px;
+@include easeOut();
+@include divCenter();
+margin-top: 7rem;
+display: flex;
+flex-direction: column;
+.work-wrapper{
+    @include cardParent();
+    .card-body{
+        background-color: #f9f4f4;
+        @include card();
+        &:hover {
+            -webkit-transform: scale(1.9);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+        
+        a{
+        color: $primary-color;
+        &:hover{
+            color: rgb(69, 186, 221);
+            text-decoration: none;
+        }
+        }
+        img{
+        width: 100%;
+        border-radius: 10px;
+        height: 330px;
+        }
+    }
+    .sm-cards{
+    background-color: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    color: #000000;
+    border-radius: 10px;
+    // padding: 4px;
+    text-align: left;
+    position: relative;
+    margin-left: 10px;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 10px 10px #00000021;
+    margin: 10px 10px;
+        p:hover{
+        color: rgba(1, 90, 106, 0.742);
+        font-weight: bolder;
+        span{
+            color: #000;
+        }
+        }
+
+        li{
+        a{
+            color: darken($color: #225dfd, $amount: 0);
+        }
+        }
+    }
+    .pageList{
+        display: flex;
+        justify-content: center
+    }
+
+}
+
+.pagi{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    .pageList {
+    display: inline-flex;
+    background-color: #fff;
+    padding: 0px;
+    border-width: 2px;
+    border: 2px solid #a49c9ced;
+    border-radius: 5px;
+    li{
+        background-color: #fff;
+        border-right: 2px solid #aea3a3;
+        padding: 1px 6px 1px 6px;
+        font-size: 20px;
+        &:hover{
+        background-color: #e6e0e0;
+        }
+    }
+    }
+}
+
+.btn-project {
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    display: inline-flex;
+    justify-content: center;
+    .more {
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #075591;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;      
+    }
+}
+
+}
+
+
+
+.home{ 
+  @include easeOut();
+  @include divCenter();
+  display: flex;
+  flex-direction: column;
+    .title{
+        font-size: 25px;
+        font-weight: 700;
+        color: #000022;
+        text-align: center;
+    }
+    .info-group{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 500px;
+        background-color: rgb(240, 252, 0);
+        background-image: -webkit-linear-gradient(
+            30deg
+            , #f0fc00 50%, #002 50%);
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // margin-bottom: 6rem;
+            .note{
+                margin-bottom: 20px;
+                .text{
+                font-family: monospace;
+                margin: 0 auto;
+                width: 40rem;
+                color: $primary-color;
+                font-size: 30px;
+
+                &:nth-child(1){
+                    font-size: 30px;
+                    span{
+                        font-size: 50px;
+                        color: rgb(0, 242, 8);
+                        background-color: #000;
+                        text-transform: uppercase;
+                        width: max-content;
+                        margin-right: 10px;
+                    }
+                    i{
+                        color: #1e48a1;
+                        border-radius: 40px;
+                        font-weight: 700;
+                    }
+                }
+                &:nth-child(2){
+                    font-size: 50px;
+                    color: rgb(6, 6, 6);
+                }
+                }
+            }
+            .note-icon{
                 display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
-                font-size: 20px;
-                font-weight: 800;
-                &:hover{
-                    box-shadow: 5px 5px 30px 15px rgba(165, 165, 165, 0.808), 
-                    -5px -5px 30px 15px rgba(165, 165, 165, 0.808);
-                    -webkit-transform: scale(1.9);
-                    -ms-transform: scale(1.1);
-                    transform: scale(1.1);
-                    border-radius: 25px;
+                background-color: #002;
+                width: max-content;
+                .fas{
+                    font-size: 40px;
+                    margin: 10px;
+                    color: #00f208;;
+                   
+                }
+
+            }
+        }
+        .group-image{
+        
+            img{
+                width: 200px;
+                border-radius: 40px;
+                //margin: 10rem;
+            }
+        }
+    }
+    .info-experience{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+
+        .group-experience{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+    }
+
+}
+
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #f7f7f7;
+    box-shadow: 10px 10px #00000021;
+    padding: 10px;
+    border-radius: 10px;
+    .role{
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .company{
+        font-weight: 700
+    }
+    .date{
+        font-weight: 500;
+        font-size: 14px
+    }
+    .role-dis-group{
+        h6{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .role-dis{
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            li{
+                i{
+                    margin-right: 10px;
+                    color: #00f208;
                 }
             }
         }
@@ -332,6 +398,68 @@
 }
 
 
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .list{
+        @include cardParent();
+        .name{
+            width: 20rem;
+            height: 15rem;
+            background-color: #f0f0f0;
+            margin: 2rem;
+            display: inline-flex;
+            justify-content: center;
+            box-shadow: 10px 10px #00000021;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 800;
+
+            &:hover{
+                // box-shadow: 5px 5px 30px 15px rgba(165, 165, 165, 0.808), 
+                // -5px -5px 30px 15px rgba(165, 165, 165, 0.808);
+                -webkit-transform: scale(1.9);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+                border-radius: 25px;
+
+                i{
+                    color: #0dcd13;
+                }
+            }
+        }
+    }
+}
+
+
+.footer{
+    background-color: #000022;
+    height: 6rem;
+    bottom: 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .footer-wrapper{
+        display: flex;
+        flex-direction: row;
+
+        p{
+            &:nth-child(2){
+                color: #f5fcff;
+            }
+            margin-right: 10px;
+            color: #f4eb00;
+            span{
+                color: #f5fcff;
+            }
+        }
+    }
+}
 
 //media Query Mixins
 @media screen and (min-width: 768px) and (max-width: 812px) {
