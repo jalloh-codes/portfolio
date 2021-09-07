@@ -1,7 +1,6 @@
 @mixin mediaSm {
     .home{
         width: 100%;
-        background-color: violet;
         .info{
             .note{
                 .text{
@@ -10,77 +9,77 @@
             }
         }
     }
-    .not-resp{
-        padding: 0 15px 0 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        min-height: 6rem;
-        align-items: center;
-        .menu-burger{
-            display: inherit;
-            height: min-content;
-            .menu-btn{
-                background-color: transparent;
-                height: min-content;
-                .fa{
-                    font-size: 30px;
-                }
-            }
-        }
-        .hide-menu{
-            visibility: hidden;
-            width: 0;
-            background-color: blanchedalmond;
-            height: 0;
-        }
-    }
+    // .not-resp{
+    //     padding: 0 15px 0 15px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     min-height: 6rem;
+    //     align-items: center;
+    //     .menu-burger{
+    //         display: inherit;
+    //         height: min-content;
+    //         .menu-btn{
+    //             background-color: transparent;
+    //             height: min-content;
+    //             .fa{
+    //                 font-size: 30px;
+    //             }
+    //         }
+    //     }
+    //     .hide-menu{
+    //         visibility: hidden;
+    //         width: 0;
+    //         background-color: blanchedalmond;
+    //         height: 0;
+    //     }
+    // }
     
 
-    .responsive{
-        padding: 0 15px 0 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        min-height: 6rem;
-        align-items: baseline;
-        .hide-menu{
-            visibility: visible;
-            width: 60%;
-            height: min-content;
-            overflow: hidden;
-            .wraper{
-                .links{
-                    display: flex;
-                    flex-direction: column;
-                    width: min-content;
-                    margin: 0;
-                    li{
-                        font-size: 15px;
-                    }
-                }
-            }
-            .icon-wrapper{
-                justify-content: start;
-                a{
-                    i{
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
-        .menu-burger{
-            display: inherit;
-            height: min-content;
-            .menu-btn{
-                background-color: transparent;
-                height: min-content;
-                .fa{
-                    font-size: 30px;
-                }
-            }
-        }
-    }
+    // .responsive{
+    //     padding: 0 15px 0 15px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     min-height: 6rem;
+    //     align-items: baseline;
+    //     .hide-menu{
+    //         visibility: visible;
+    //         width: 60%;
+    //         height: min-content;
+    //         overflow: hidden;
+    //         .wraper{
+    //             .links{
+    //                 display: flex;
+    //                 flex-direction: column;
+    //                 width: min-content;
+    //                 margin: 0;
+    //                 li{
+    //                     font-size: 15px;
+    //                 }
+    //             }
+    //         }
+    //         .icon-wrapper{
+    //             justify-content: start;
+    //             a{
+    //                 i{
+    //                     font-size: 20px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .menu-burger{
+    //         display: inherit;
+    //         height: min-content;
+    //         .menu-btn{
+    //             background-color: transparent;
+    //             height: min-content;
+    //             .fa{
+    //                 font-size: 30px;
+    //             }
+    //         }
+    //     }
+    // }
     // .header{
         
     //     // .wraper {

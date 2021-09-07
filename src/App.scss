@@ -369,21 +369,21 @@ flex-direction: column;
 }
 
 //media Query Mixins
-// @media screen and (min-width: 768px) and (max-width: 812px) {
-//   @include mediaXL();
-// }
+@media screen and (min-width: 768px) and (max-width: 812px) {
+  @include mediaXL();
+}
 
-// @media screen and (min-width: 501px) and (max-width: 767px) {
-//   @include mediaLg();
-// }
+@media screen and (min-width: 501px) and (max-width: 767px) {
+  @include mediaLg();
+}
 
-// @media screen and (min-width: 377px) and (max-width: 500px) {
-//   @include mediaMd();
-// }
+@media screen and (min-width: 377px) and (max-width: 500px) {
+  @include mediaMd();
+}
 
-// @media screen and (max-width: 376px) {
-//   @include mediaSm();
-// }
+@media screen and (max-width: 376px) {
+  @include mediaSm();
+}
 
 @media screen  and (min-width: 1134px){
     .not-resp{
