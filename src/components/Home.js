@@ -27,19 +27,19 @@ state={
                 <div className="info">
                     <div className="note">
                         <p className="text"> <span>Hi!</span>I am Jalloh <i>☺</i></p>
-                        <p className="text">WEB DEVELOPER</p>
+                        <p className="text">WEB DEVELOPER...</p>
                     </div>
-                    <div className="note-icon">
+                    {/* <div className="note-icon">
                         <i className="fas fa-mobile-alt"></i>
                         <i className="fas fa-laptop-code"></i>
-                        {/* <p className="text">
-                        I am a passionate web & mobile developer. 
-                        I enjoy building frontend and backend applications.
-                        </p> */}
-                    </div>
+                    </div> */}
                 </div>
                 <div className="group-image">
                     {/* <img src={Me} alt="profile" /> */}
+                    <div className="note-icon">
+                        <i className="fas fa-mobile-alt"></i>
+                        <i className="fas fa-laptop-code"></i>
+                    </div>
                 </div>
             </div>
 
