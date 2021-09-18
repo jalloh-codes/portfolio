@@ -10,7 +10,7 @@ state={
         role:'Software Developer Intern',
         link: `https://www.a2apharma.com`,
         company:'A2A Pharmaceuticals',
-        date: 'June 2020 - Present',
+        date: 'Jun 2021 - Sep 2021',
         roledis: ['Used React.js to build a Web app for a prebuilt Flask backend.',
                 'Packaged a Web app into a desktop app with Electron.',
                 'Debugged Flask App(Backend) for better interaction with React.js(Frontend).',
