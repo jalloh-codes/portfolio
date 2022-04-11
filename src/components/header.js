@@ -1,25 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 
 
 
 const Header = () =>{
 
-
-    // useEffect(() =>{
-    //     //docStyle()
-    // }, [])
-
-    // const docStyle =() =>{
-    //     const width = document.body.clientWidth 
-    //     if(width <= 1133){
-    //         //not-resp
-    //         console.log(width);
-    //         const doc=document.getElementById('myheader')
-
-    //         doc.classList.remove('not-resp')
-    //     }
-    // }
 
     const [res, setRes] = useState(false)
     const responsive = () =>{
