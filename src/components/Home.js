@@ -4,15 +4,6 @@ import Skills from '../components/skills'
 import mobile from '../img/mobile.gif'
 import banner from '../img/banner.png'
 class Home  extends Component{
-    // o Collaborate, discuss, and design a Web Application with A2A scientist team
-
-    // o Utilize front end JavaScript frameworks and server applications
-    
-    // o Connect backend machine learning applications to interface
-    
-    // o Iterate and improve project function
-    
-    // o Demonstrate findings to the broader team and convey value-add to company investors
 
     state={
         experience: [
