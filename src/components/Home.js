@@ -1,50 +1,58 @@
 import React, {Component} from 'react';
 import Experience from '../components/Experience'
 import Skills from '../components/skills'
+import mobile from '../img/mobile.gif'
+import banner from '../img/banner.png'
 class Home  extends Component{
+    // o Collaborate, discuss, and design a Web Application with A2A scientist team
 
+    // o Utilize front end JavaScript frameworks and server applications
+    
+    // o Connect backend machine learning applications to interface
+    
+    // o Iterate and improve project function
+    
+    // o Demonstrate findings to the broader team and convey value-add to company investors
 
-state={
-    experience: [
-        {id:0, 
-        role:'Software Developer Intern',
-        link: `https://www.a2apharma.com`,
-        company:'A2A Pharmaceuticals',
-        date: 'June 2020 - Present',
-        roledis: ['Used React.js to build a Web app for a prebuilt Flask backend.',
-                'Packaged a Web app into a desktop app with Electron.',
-                'Debugged Flask App(Backend) for better interaction with React.js(Frontend).',
-                'Built and maintains AWS tools, EC2 and Workspace.']
-        },
-    ]
-}    
+    state={
+        experience: [
+            {id:0, 
+            role:'Software Developer Intern',
+            link: `https://www.a2apharma.com`,
+            company:'A2A Pharmaceuticals',
+            date: 'Jun 2021 - Sep 2021',
+            roledis: ['Collaborate, discuss, and design a Web Application with the scientist team',
+                    'Connect backend machine learning applications to interface',
+                    'Packaged a Web app into a desktop app with Electron.',
+                    'Debugged Flask App(Backend) for better interaction with React.js(Frontend).',
+                    'Built and maintains AWS tools, EC2 and Workspace.']
+            },
+            {id:1, 
+                role:'Software Engineer Contractor',
+                link: `https://www.a2apharma.com`,
+                company:'A2A Pharmaceuticals',
+                date: 'Nov 2021 - Dec 2021',
+                roledis: ['Collaborate, discuss, and design a Web Application with the scientist team',
+                        'Connect backend machine learning applications to interface',
+                        'Successfully resolved Open Source project API errors.',
+                        'Debug a python application and improve functionality.']
+                },
+        ]
+    }    
 
     render(){
         const experiences = this.state.experience
     return(
         <div className="home">
             <div className="info-group">
-                <div className="info">
-                    <div className="note">
-                        <p className="text"> <span>Hi!</span>I am Jalloh <i>☺</i></p>
-                        <p className="text">WEB DEVELOPER...</p>
-                    </div>
-                    {/* <div className="note-icon">
-                        <i className="fas fa-mobile-alt"></i>
-                        <i className="fas fa-laptop-code"></i>
-                    </div> */}
-                </div>
-                <div className="group-image">
-                    {/* <img src={Me} alt="profile" /> */}
-                    <div className="note-icon">
-                        <i className="fas fa-mobile-alt"></i>
-                        <i className="fas fa-laptop-code"></i>
-                    </div>
-                </div>
+                <img src={banner} alt="banner"  className='bannert-img'/>
             </div>
-
+            <div className='recent-project'>
+                <h4 className="title">Recent Project</h4>
+                <img src={mobile} alt="recent Project"  className='recent-project-img'/>
+            </div>
            <div className="info-experience">
-               <h4 className="title">Experience</h4>
+               <h4 className="title">Work History</h4>
                <div className="group-experience">
                 {experiences.map((experience) => <Experience experience={experience} key={experience.id}/>)}
                </div>
